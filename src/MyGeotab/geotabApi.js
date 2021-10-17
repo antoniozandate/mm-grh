@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  *  @version 2014-07-21
  *  @description The Geotab JS API library.

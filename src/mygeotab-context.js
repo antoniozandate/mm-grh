@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { GeotabService } from './MyGeotab/geotabService'
+import GeotabService from './MyGeotab/geotabService'
 
 const MyGeotabContext = React.createContext()
 
@@ -35,8 +35,7 @@ function useMyGeotab({ addinName, production }) {
 	React.useEffect(() => {
 		async function initApi() {
 			try {
-				const geotabService = new GeotabService()
-				const apiRef = await geotabService.init(addinName, production)
+				const apiRef = await GeotabService(addinName, production)
 				apiRef.getSession((credentials, server) => {
 					if (credentials.database && server) {
 						setApi(apiRef)

@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 require('./geotabApi')
 
 let api = new GeotabApi(
